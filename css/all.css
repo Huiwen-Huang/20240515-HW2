@@ -528,11 +528,14 @@ footer .btn ul li a {
   padding: 8px 0;
   padding-left: 24px;
 }
-footer .btn ul li a img {
+footer .btn ul li img {
   color: #3b3b3b;
 }
-footer .btn ul li a p {
+footer .btn ul li p {
   color: #3b3b3b;
+}
+footer .btn ul li p:hover {
+  border-bottom: 2px solid #3b3b3b;
 }
 footer .btn ul .form {
   background-color: #000000;
@@ -542,4 +545,7 @@ footer .btn ul .form .list {
 }
 footer .btn ul .form p {
   color: #fff;
+}
+footer .btn ul .form p:hover {
+  border-bottom: 2px solid #fff;
 }/*# sourceMappingURL=all.css.map */
