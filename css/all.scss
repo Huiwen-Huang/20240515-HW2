@@ -293,7 +293,7 @@ main {
       height: 1640px;
       background-color: #fafafa;
       @include mobile {
-        width: 521px;
+        width: 100%;
         height: auto;
         margin-bottom: 40px;
       }
@@ -320,7 +320,7 @@ main {
               padding-bottom: 4px;
             }
             @include mobile {
-              font-size: 16px;
+              font-size: 14px;
             }
           }
         }

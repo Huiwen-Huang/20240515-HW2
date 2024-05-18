@@ -315,7 +315,7 @@ main .blog .blog-list {
 }
 @media (max-width: 375px) {
   main .blog .blog-list {
-    width: 521px;
+    width: 100%;
     height: auto;
     margin-bottom: 40px;
   }
@@ -351,7 +351,7 @@ main .blog .blog-list ul li a:hover {
 }
 @media (max-width: 375px) {
   main .blog .blog-list ul li a {
-    font-size: 16px;
+    font-size: 14px;
   }
 }
 main .blog .content {
