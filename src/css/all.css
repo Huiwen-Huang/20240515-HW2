@@ -207,21 +207,59 @@ header .container nav ul {
     z-index: 2;
   }
 }
+header .container nav ul li,
+header .container nav ul .menu-list {
+  position: relative;
+}
+header .container nav ul li::before, header .container nav ul li::after,
+header .container nav ul .menu-list::before,
+header .container nav ul .menu-list::after {
+  content: "";
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  border: 1px solid #919191;
+  -webkit-box-reflect: below 20px;
+  opacity: 0;
+}
+header .container nav ul li::before,
+header .container nav ul .menu-list::before {
+  top: 0;
+  left: 0;
+  border-bottom: none;
+  border-right: none;
+}
+header .container nav ul li::after,
+header .container nav ul .menu-list::after {
+  top: 0;
+  right: 0;
+  border-bottom: none;
+  border-left: none;
+}
+header .container nav ul li:hover::before, header .container nav ul li:hover::after,
+header .container nav ul .menu-list:hover::before,
+header .container nav ul .menu-list:hover::after {
+  opacity: 1;
+}
 @media (max-width: 768px) {
-  header .container nav ul li {
+  header .container nav ul li,
+  header .container nav ul .menu-list {
     margin-bottom: 4px;
   }
 }
-header .container nav ul li a {
+header .container nav ul li a,
+header .container nav ul .menu-list a {
   display: block;
   padding: 4px 8px;
   color: #000000;
 }
-header .container nav ul li a:hover {
+header .container nav ul li a:hover,
+header .container nav ul .menu-list a:hover {
   font-weight: 600;
 }
 @media (max-width: 768px) {
-  header .container nav ul li a {
+  header .container nav ul li a,
+  header .container nav ul .menu-list a {
     padding-top: 8px;
     padding-bottom: 8px;
   }

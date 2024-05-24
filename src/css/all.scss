@@ -199,7 +199,35 @@ header {
           padding: 8px;
           z-index: 2;
         }
-        li {
+        li,
+        .menu-list {
+          position: relative;
+          &::before,
+          &::after {
+            content: "";
+            position: absolute;
+            width: 8px;
+            height: 8px;
+            border: 1px solid #919191;
+            -webkit-box-reflect: below 20px;
+            opacity: 0;
+          }
+          &::before {
+            top: 0;
+            left: 0;
+            border-bottom: none;
+            border-right: none;
+          }
+          &::after {
+            top: 0;
+            right: 0;
+            border-bottom: none;
+            border-left: none;
+          }
+          &:hover::before,
+          &:hover::after {
+            opacity: 1;
+          }
           @include mobile {
             margin-bottom: 4px;
           }
