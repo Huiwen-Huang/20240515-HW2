@@ -3,7 +3,6 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="css/all.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -18,69 +17,52 @@
       rel="stylesheet"
       href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css"
     />
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="src/css/all.css" />
     <title>切版任務二 - 部落格</title>
   </head>
   <body>
     <header>
-      <div class="logo">
-        <a href="#">
-          <img
-            src="https://raw.githubusercontent.com/hexschool/2022-web-layout-training/d796f511bed88b5468b1c02b9dc1f17048b1448f/2024%20web-camp/logo.svg"
-            alt=""
-          />
-        </a>
-      </div>
-      <nav class="close">
-        <ul>
-          <li><a href="#">首頁</a></li>
-          <li><a href="#">作品集</a></li>
-          <li><a href="#">服務項目</a></li>
-          <li><a href="#">部落格</a></li>
-          <li><a href="#">聯絡我</a></li>
-        </ul>
-      </nav>
-      <div class="menu">
-        <span class="material-symbols-outlined hamburger-icon"> menu </span>
+      <div class="container">
+        <div class="logo">
+          <a href="#">
+            <img
+              src="https://raw.githubusercontent.com/hexschool/2022-web-layout-training/d796f511bed88b5468b1c02b9dc1f17048b1448f/2024%20web-camp/logo.svg"
+              alt=""
+            />
+          </a>
+        </div>
+        <nav class="close">
+          <ul>
+            <li><a href="#">首頁</a></li>
+            <li><a href="#">作品集</a></li>
+            <li><a href="#">服務項目</a></li>
+            <li><a href="#">部落格</a></li>
+            <li><a href="#">聯絡我</a></li>
+          </ul>
+        </nav>
+        <div class="menu">
+          <span class="material-symbols-outlined hamburger-icon"> menu </span>
+        </div>
       </div>
     </header>
-    <main>
-      <div class="container">
-        <div class="title">
-          <img
-            class="lg"
-            src="https://github.com/hexschool/2022-web-layout-training/blob/main/2024%20web-camp/title-deco-left-lg.png?raw=true"
-            alt=""
-          />
-          <img
-            class="sm"
-            src="https://github.com/hexschool/2022-web-layout-training/blob/main/2024%20web-camp/title-deco-left-sm.png?raw=true"
-            alt=""
-          />
-          <h2>部落格</h2>
-          <img
-            class="lg"
-            src="https://github.com/hexschool/2022-web-layout-training/blob/main/2024%20web-camp/title-deco-right-lg.png?raw=true"
-            alt=""
-          />
-          <img
-            class="sm"
-            src="https://github.com/hexschool/2022-web-layout-training/blob/main/2024%20web-camp/title-deco-right-sm.png?raw=true"
-            alt=""
-          />
-        </div>
+    <main class="container">
+      <div class="banner">
+        <h1 class="title">
+          <span class="title-text">部落格</span>
+        </h1>
         <div class="subtitle">
           <p>不定期分享技術文章</p>
         </div>
       </div>
       <div class="blog">
         <div class="blog-list">
-          <ul id="draggable-ul">
+          <ul>
+            <!-- id="draggable-ul" -->
             <li><a href="#">全部文章</a></li>
             <li><a href="#">UI/UX 新知</a></li>
             <li><a href="#">數位產品設計</a></li>
             <li><a href="#">平面設計</a></li>
-            <li><a href="#">前端開發</a></li>
+            <li><a href="#" class="f2e">前端開發</a></li>
           </ul>
         </div>
         <div class="content">
@@ -214,7 +196,7 @@
                 </p>
               </div>
             </li>
-            <li>
+            <li class="lastPost">
               <div class="blog-img">
                 <div class="img img6"></div>
               </div>
@@ -241,53 +223,54 @@
       </div>
     </main>
     <footer>
-      <div class="info">
-        <img
-          src="https://raw.githubusercontent.com/hexschool/2022-web-layout-training/d796f511bed88b5468b1c02b9dc1f17048b1448f/2024%20web-camp/logo.svg"
-          alt="logo"
-        />
-        <p class="text">
-          若有數位產品設計和開發相關問題歡迎填寫表單，或直接與我聯絡！
-        </p>
-        <a class="email" href="mailto:service@hexschool.com"
-          >service@hexschool.com</a
-        >
-      </div>
-      <div class="btn">
-        <ul>
-          <li>
-            <a class="form" href="#">
-              <img
-                class="list"
-                src="https://raw.githubusercontent.com/hexschool/2022-web-layout-training/d796f511bed88b5468b1c02b9dc1f17048b1448f/2024%20web-camp/list.svg"
-                alt=""
-              />
-              <p>填寫表單</p>
-            </a>
-          </li>
-          <li>
-            <a href="#">
-              <img
-                src="https://raw.githubusercontent.com/hexschool/2022-web-layout-training/a0deba953fc5322a513e717e7c24b25fa3d946f8/2024%20web-camp/instagram.svg"
-                alt=""
-              />
-              <p>hexschool_demo</p>
-            </a>
-          </li>
-          <li>
-            <a href="#">
-              <img
-                src="https://raw.githubusercontent.com/hexschool/2022-web-layout-training/a0deba953fc5322a513e717e7c24b25fa3d946f8/2024%20web-camp/facebook.svg"
-                alt=""
-              />
-              <p>hexschoolTW</p>
-            </a>
-          </li>
-        </ul>
+      <div class="container">
+        <div class="info">
+          <img
+            src="https://raw.githubusercontent.com/hexschool/2022-web-layout-training/d796f511bed88b5468b1c02b9dc1f17048b1448f/2024%20web-camp/logo.svg"
+            alt="logo"
+          />
+          <p class="text">
+            若有數位產品設計和開發相關問題歡迎填寫表單，或直接與我聯絡！
+          </p>
+          <a class="email" href="mailto:service@hexschool.com"
+            >service@hexschool.com</a
+          >
+        </div>
+        <div class="btn">
+          <ul>
+            <li>
+              <a class="form" href="#">
+                <img
+                  class="list"
+                  src="https://raw.githubusercontent.com/hexschool/2022-web-layout-training/d796f511bed88b5468b1c02b9dc1f17048b1448f/2024%20web-camp/list.svg"
+                  alt=""
+                />
+                <p>填寫表單</p>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <img
+                  src="https://raw.githubusercontent.com/hexschool/2022-web-layout-training/a0deba953fc5322a513e717e7c24b25fa3d946f8/2024%20web-camp/instagram.svg"
+                  alt=""
+                />
+                <p>hexschool_demo</p>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <img
+                  src="https://raw.githubusercontent.com/hexschool/2022-web-layout-training/a0deba953fc5322a513e717e7c24b25fa3d946f8/2024%20web-camp/facebook.svg"
+                  alt=""
+                />
+                <p>hexschoolTW</p>
+              </a>
+            </li>
+          </ul>
+        </div>
       </div>
     </footer>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
-    <script src="all.js"></script>
+    <script src="src/js/all.js"></script>
   </body>
 </html>
