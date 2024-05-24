@@ -350,30 +350,32 @@ main,
     flex-direction: row-reverse;
     justify-content: space-between;
     margin-bottom: 120px;
+    padding-left: 12px;
     @include mobile {
       flex-direction: column;
       margin: 0;
     }
     .blog-list {
-      width: 25%;
+      width: 24%;
       background-color: #fafafa;
       padding-top: 80px;
+      padding-left: 80px;
+      padding-right: 40px;
+      margin-right: 12px;
       @include mobile {
         width: 100%;
         padding: 0 12px;
         margin-bottom: 40px;
       }
       ul {
-        padding-left: 80px;
-        overflow-x: auto;
         @include mobile {
+          overflow-x: auto;
           display: flex;
           justify-content: space-between;
           padding: 0;
         }
         li {
           a {
-            white-space: nowrap;
             font-size: 20px;
             color: #5b5b5b;
             display: inline-block;
@@ -397,6 +399,7 @@ main,
               transform: scaleX(1);
             }
             @include mobile {
+              white-space: nowrap;
               font-size: 14px;
               margin: 20px 0;
               margin-right: 32px;
@@ -494,8 +497,22 @@ main,
               font-weight: 600;
               line-height: 1.2;
               color: #3b3b3b;
-              &:hover {
-                border-bottom: 2px solid #3b3b3b;
+              position: relative;
+              &::after {
+                /* 添加這塊 */
+                content: "";
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                height: 1px;
+                background-color: #1e1e1e;
+                transform: scaleX(0);
+                transition: transform 0.3s ease;
+              }
+              &:hover::after {
+                /* 添加這塊 */
+                transform: scaleX(1);
               }
             }
           }
@@ -582,6 +599,7 @@ footer {
         justify-content: space-between;
         li {
           a {
+            width: 100%;
             display: flex;
             align-items: center;
             background-color: #fff;
@@ -599,8 +617,22 @@ footer {
           }
           p {
             color: #3b3b3b;
-            &:hover {
-              border-bottom: 2px solid #3b3b3b;
+            position: relative;
+            &::after {
+              /* 添加這塊 */
+              content: "";
+              position: absolute;
+              bottom: 0;
+              left: 0;
+              right: 0;
+              height: 1px;
+              background-color: #3b3b3b;
+              transform: scaleX(0);
+              transition: transform 0.3s ease;
+            }
+            &:hover::after {
+              /* 添加這塊 */
+              transform: scaleX(1);
             }
           }
         }
@@ -611,8 +643,22 @@ footer {
           }
           p {
             color: #fff;
-            &:hover {
-              border-bottom: 2px solid #fff;
+            position: relative;
+            &::after {
+              /* 添加這塊 */
+              content: "";
+              position: absolute;
+              bottom: 0;
+              left: 0;
+              right: 0;
+              height: 1px;
+              background-color: #fff;
+              transform: scaleX(0);
+              transition: transform 0.3s ease;
+            }
+            &:hover::after {
+              /* 添加這塊 */
+              transform: scaleX(1);
             }
           }
         }
