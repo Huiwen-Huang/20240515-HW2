@@ -188,6 +188,11 @@ header .container .logo img {
 header .container nav {
   width: 33%;
 }
+@media (max-width: 768px) {
+  header .container nav {
+    z-index: 1000;
+  }
+}
 header .container nav ul {
   width: 480px;
   display: flex;
@@ -204,7 +209,6 @@ header .container nav ul {
     top: 56px;
     left: 0%;
     padding: 8px;
-    z-index: 2;
   }
 }
 header .container nav ul li,
