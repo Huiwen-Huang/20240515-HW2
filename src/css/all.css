@@ -194,7 +194,7 @@ header .container nav {
   }
 }
 header .container nav ul {
-  width: 480px;
+  width: 100%;
   display: flex;
   justify-content: space-between;
 }
@@ -386,23 +386,23 @@ main .blog,
   flex-direction: row-reverse;
   justify-content: space-between;
   margin-bottom: 120px;
-  padding-left: 12px;
 }
 @media (max-width: 768px) {
   main .blog,
   .container .blog {
     flex-direction: column;
     margin: 0;
+    padding: 0;
   }
 }
 main .blog .blog-list,
 .container .blog .blog-list {
   width: 24%;
   background-color: #fafafa;
+  border-radius: 8px;
   padding-top: 80px;
   padding-left: 80px;
   padding-right: 40px;
-  margin-right: 12px;
 }
 @media (max-width: 768px) {
   main .blog .blog-list,
@@ -623,7 +623,7 @@ footer {
 }
 @media (max-width: 768px) {
   footer {
-    background: url("https://github.com/hexschool/2022-web-layout-training/blob/main/2024%20web-camp/footer-bg-sm.png?raw=true");
+    background: url("https://github.com/hexschool/2022-web-layout-training/blob/main/2024%20web-camp/footer-bg-sm.png?raw=true") center no-repeat cover;
   }
 }
 footer .container {
@@ -684,10 +684,14 @@ footer .container .btn {
 @media (max-width: 768px) {
   footer .container .btn {
     width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
 }
 footer .container .btn ul {
-  width: 100%;
+  width: 306px;
   height: 264px;
   display: flex;
   flex-direction: column;
